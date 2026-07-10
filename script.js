@@ -41,29 +41,32 @@ function typeWriter() {
 
 // ---------------- Start Button ----------------
 
-document.getElementById("startBtn").onclick = function () {
+document.getElementById("startBtn").addEventListener("click", async function () {
 
-    // Play Music
     const music = document.getElementById("bgMusic");
 
     if (music) {
-        music.volume = 0.5;
-        music.play().catch(err => console.log(err));
+        try {
+            music.pause();
+            music.currentTime = 0;
+            music.volume = 0.5;
+            await music.play();
+        } catch (err) {
+            console.log("Music error:", err);
+        }
     }
 
-    // Scroll
     document.getElementById("gallery").scrollIntoView({
         behavior: "smooth"
     });
 
-    // Typing
     if (i === 0) {
         typeWriter();
     }
 
-    // Voice
     playVoice();
-};
+
+});
 
 // ---------------- Slider ----------------
 
