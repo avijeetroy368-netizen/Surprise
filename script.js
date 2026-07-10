@@ -180,3 +180,30 @@ for(let i=0;i<80;i++){
     document.body.appendChild(star);
 
 }
+// ===============================
+// Premium Falling Flowers
+// ===============================
+
+const flowers = ["🌹","🌸","🌺","🌻","💮","💐","✨"];
+
+setInterval(() => {
+
+    const flower = document.createElement("div");
+
+    flower.innerHTML = flowers[Math.floor(Math.random()*flowers.length)];
+
+    flower.style.position = "fixed";
+    flower.style.left = Math.random()*100 + "vw";
+    flower.style.top = "-50px";
+    flower.style.fontSize = (18 + Math.random()*22) + "px";
+    flower.style.pointerEvents = "none";
+    flower.style.zIndex = "9999";
+    flower.style.animation = `flowerFall ${6 + Math.random()*5}s linear`;
+
+    document.body.appendChild(flower);
+
+    setTimeout(()=>{
+        flower.remove();
+    },11000);
+
+},450);
