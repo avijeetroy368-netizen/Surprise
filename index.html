@@ -7,7 +7,6 @@
 <title>Happy Birthday Preeti ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -17,12 +16,15 @@
 <!-- Loader -->
 
 <div id="loader">
-
-<h1>🎁 A Little Surprise ❤️</h1>
-
-<p>Loading your special day...</p>
-
+    <h1>🎁 A Little Surprise ❤️</h1>
+    <p>Loading your special day...</p>
 </div>
+
+<!-- Background Music -->
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <!-- Hero -->
 
@@ -51,10 +53,10 @@ Open Your Surprise 🎁
 
 <section id="gallery">
 
-<img src="photo1.jpg" class="slide active">
-<img src="photo2.jpg" class="slide">
-<img src="photo3.jpg" class="slide">
-<img src="photo4.jpg" class="slide">
+<img src="images/photo1.jpg" class="slide active" alt="Photo 1">
+<img src="images/photo2.jpg" class="slide" alt="Photo 2">
+<img src="images/photo3.jpg" class="slide" alt="Photo 3">
+<img src="images/photo4.jpg" class="slide" alt="Photo 4">
 
 </section>
 
@@ -88,7 +90,7 @@ Stay happy forever.<br><br>
 
 With Best Wishes ❤️<br>
 
-<b>— Avijeet</b>
+<b>— Avijeet ❤️</b>
 
 </p>
 
@@ -110,27 +112,33 @@ Open My Letter 💌
 
 <p>
 
-Thank you for being such a wonderful person.
+Thank you for being such a wonderful person.<br><br>
 
-I wish your birthday becomes one of the happiest days of your life.
+I wish your birthday becomes one of the happiest days of your life.<br><br>
 
-May success, happiness and love always stay with you.
+May success, happiness and love always stay with you.<br><br>
 
-Keep smiling forever.
+Keep smiling forever.<br><br>
 
 Happy Birthday once again ❤️
 
 </p>
 
 <button onclick="closeLetter()">
-
 Close ❤️
-
 </button>
 
 </div>
 
 </div>
+
+<script>
+document.getElementById("startBtn").addEventListener("click", function () {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.5;
+    music.play().catch(err => console.log(err));
+});
+</script>
 
 <script src="script.js"></script>
 
