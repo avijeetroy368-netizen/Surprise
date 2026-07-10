@@ -205,7 +205,50 @@ transform:scale(.8);
 transform:translateY(-80px) rotate(0deg);
 opacity:1;
 }
+/* ========================= */
+/* Gallery */
+/* ========================= */
 
+#gallery{
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slide{
+    width:340px;
+    max-width:92%;
+    border-radius:25px;
+    display:none;
+    object-fit:cover;
+    box-shadow:0 20px 50px rgba(255,105,180,.4);
+}
+
+.slide.active{
+    display:block;
+    animation:
+    fade 1s,
+    photoZoom 6s ease-in-out forwards;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes photoZoom{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.12);
+    }
+}
 100%{
 transform:translateY(120vh) rotate(720deg);
 opacity:0;
