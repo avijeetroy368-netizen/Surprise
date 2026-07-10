@@ -94,27 +94,31 @@ function closeLetter() {
     document.getElementById("letter").classList.add("hidden");
 }
 
-// ---------------- Floating Hearts ----------------
+// ---------------- Floating Flowers & Hearts ----------------
+
+const items = ["❤️","🌹","🌸","🌺","🌻","💐"];
 
 setInterval(() => {
 
     let heart = document.createElement("div");
 
-    heart.innerHTML = "❤️";
+    heart.innerHTML = items[Math.floor(Math.random() * items.length)];
 
     heart.style.position = "fixed";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.bottom = "-20px";
-    heart.style.fontSize = (20 + Math.random() * 20) + "px";
-    heart.style.animation = "floatHeart 6s linear";
+    heart.style.bottom = "-40px";
+    heart.style.fontSize = (22 + Math.random() * 20) + "px";
+    heart.style.animation = "floatHeart 7s linear";
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "999";
 
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 6000);
+    }, 7000);
 
-}, 800);
+}, 500);
 
 // ---------------- Animation ----------------
 
