@@ -24,6 +24,13 @@
     inset:0;
     overflow:hidden;
     z-index:1;
+
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,128,171,.35), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.18), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(255,64,129,.30), transparent 35%);
+
+    animation:heroLights 12s ease-in-out infinite alternate;
 }
 
 .hero-bg::before{
@@ -122,7 +129,27 @@ button:hover{
         transform:translate(120px,120px) rotate(360deg);
     }
 }
+@keyframes heroLights{
 
+0%{
+transform:scale(1);
+filter:blur(0px);
+opacity:.8;
+}
+
+50%{
+transform:scale(1.08);
+filter:blur(10px);
+opacity:1;
+}
+
+100%{
+transform:scale(1);
+filter:blur(0px);
+opacity:.8;
+}
+
+}
 @media(max-width:768px){
 
 .hero-content{
