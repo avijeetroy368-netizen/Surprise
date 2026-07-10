@@ -158,3 +158,25 @@ function playVoice() {
     }
 
 }
+// ===============================
+// Twinkling Stars
+// ===============================
+
+for(let i=0;i<80;i++){
+
+    const star=document.createElement("div");
+
+    star.innerHTML="✦";
+
+    star.style.position="fixed";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.fontSize=(6+Math.random()*8)+"px";
+    star.style.color="white";
+    star.style.opacity=Math.random();
+    star.style.pointerEvents="none";
+    star.style.animation=`twinkle ${2+Math.random()*4}s infinite`;
+
+    document.body.appendChild(star);
+
+}
