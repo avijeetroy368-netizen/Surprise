@@ -146,3 +146,25 @@ button:hover{
 }
 
 }
+/* ========================= */
+/* Twinkling Stars */
+/* ========================= */
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+100%{
+opacity:.2;
+transform:scale(.8);
+}
+
+}
