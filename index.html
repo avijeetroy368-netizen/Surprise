@@ -14,31 +14,38 @@
 <body>
 
 <!-- Loader -->
-
 <div id="loader">
     <h1>🎁 A Little Surprise ❤️</h1>
     <p>Loading your special day...</p>
 </div>
 
 <!-- Background Music -->
-
 <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Hero -->
-
 <section id="hero">
 
 <div class="hero-content">
 
-<h1>Happy Birthday 🎂</h1>
+<h1>✨ A Birthday Surprise ✨</h1>
 
-<h2>Preeti ❤️</h2>
+<h2>For Someone Truly Special</h2>
+
+<h3 style="font-size:55px;color:#ffd6e7;margin:15px 0;letter-spacing:4px;">
+❤️ PREETI ❤️
+</h3>
 
 <p>
-It's the day someone truly special came into this world.
-May your life always be filled with happiness, smiles and love.
+Today isn't just another day...<br><br>
+
+It's the day someone truly special came into this world.<br>
+
+May your life always be filled with happiness,
+love, laughter and beautiful memories.<br><br>
+
+This little surprise was made only for you. ❤️
 </p>
 
 <button id="startBtn">
@@ -50,7 +57,6 @@ Open Your Surprise 🎁
 </section>
 
 <!-- Gallery -->
-
 <section id="gallery">
 
 <img src="images/photo1.jpg" class="slide active" alt="Photo 1">
@@ -61,7 +67,6 @@ Open Your Surprise 🎁
 </section>
 
 <!-- Message -->
-
 <section id="message">
 
 <div class="card">
@@ -75,7 +80,6 @@ Open Your Surprise 🎁
 </section>
 
 <!-- Final -->
-
 <section id="final">
 
 <h1>Happy Birthday ❤️</h1>
@@ -135,8 +139,11 @@ Close ❤️
 <script>
 document.getElementById("startBtn").addEventListener("click", function () {
     const music = document.getElementById("bgMusic");
-    music.volume = 0.5;
-    music.play().catch(err => console.log(err));
+
+    if (music) {
+        music.volume = 0.5;
+        music.play().catch(err => console.log(err));
+    }
 });
 </script>
 
